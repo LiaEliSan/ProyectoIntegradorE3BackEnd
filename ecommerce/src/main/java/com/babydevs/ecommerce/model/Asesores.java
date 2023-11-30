@@ -14,13 +14,13 @@ public class Asesores {
 		this.nombre = nombre;
 		this.descripcion = descripcion;
 		this.imagen = imagen;
-		Asesores.total++;
 		this.precio = precio;
+		Asesores.total++;
 		this.id = total;
 	}//Constructor 
 	
 	public Asesores() {
-		this.precio = precio;
+		Asesores.total++;
 		this.id = total;
 	}// Constructor
 
