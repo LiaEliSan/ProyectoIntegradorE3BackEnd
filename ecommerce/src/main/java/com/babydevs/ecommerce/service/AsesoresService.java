@@ -11,7 +11,8 @@ import com.babydevs.ecommerce.model.Asesores;
 public class AsesoresService {
 	public final ArrayList<Asesores> lista = new ArrayList<Asesores>();
 	
-  @Autowired
+  @Autowired 
+  
 	public AsesoresService() {
 	  
 	lista.add(new Asesores("Jessica L. Olivera", "Habilidad Principal Java / Habilidades secundarias Trello y MySQL",

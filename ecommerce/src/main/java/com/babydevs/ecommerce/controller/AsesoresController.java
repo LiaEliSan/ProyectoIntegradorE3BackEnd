@@ -13,7 +13,7 @@ import com.babydevs.ecommerce.service.AsesoresService;
 /// HTTP   -  POST     -  GET    -  PUT      -  DELETE
 
 @RestController
-@RequestMapping (path="/api/asesores/") //Http://localhost:8080/api/asesores/
+@RequestMapping(path="/api/asesores/") //Http://localhost:8080/api/asesores/
 
 public class AsesoresController {
 	private final AsesoresService asesoresService;
