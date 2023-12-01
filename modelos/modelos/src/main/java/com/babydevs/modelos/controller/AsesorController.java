@@ -1,5 +1,5 @@
 package com.babydevs.modelos.controller;
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,18 +24,18 @@ public class AsesorController {
 		this.asesorService = asesorService;
 	}//constructor
 	
-	@GetMapping
-	public ArrayList<Asesor> getAllAsesores(){
+	@GetMapping  // http://localhost:8080/api/productos/
+	public List<Asesor> getAllAsesores(){
 		return asesorService.getAllAsesores();
 	}//getAllProductos
 	
-	@GetMapping(path="{aseId}")
+	@GetMapping(path="{aseId}")  // http://localhost:8080/api/productos/1
 	public Asesor getAsesor(@PathVariable("aseId") long id) {
 		return asesorService.getAsesor(id);
 		
 	}//getAsesor
 	
-	@DeleteMapping(path="{aseId}")
+	@DeleteMapping(path="{aseId}")  // http://localhost:8080/api/productos/
 	public Asesor deleteAsesor(@PathVariable("aseId") long id) {
 		return asesorService.deleteAsesor(id);
 		

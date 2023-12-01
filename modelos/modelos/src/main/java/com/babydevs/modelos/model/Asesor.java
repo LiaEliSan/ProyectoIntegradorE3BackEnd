@@ -1,15 +1,33 @@
 package com.babydevs.modelos.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+//POJO Plain Old Java Object
+@Entity
+@Table(name="asesores")
 public class Asesor {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="id", unique = true, nullable = false)
 	private Long id;
+	@Column(nullable = false)
 	private String nombre; 
+	@Column(nullable = false)
 	private String descripcion;
+	@Column(nullable = false)
 	private String habilidad_principal;
+	@Column(nullable = false)
 	private String habilidades_secundarias;
+	@Column(nullable = false)
 	private Double tarifa_por_asesoria;
+	@Column(nullable = false)
 	private String fecha_de_inicio;
 	
-	private static long total = 0;
 
 	public Asesor(Long id, String nombre, String descripcion, String habilidad_principal,
 			String habilidades_secundarias, Double tarifa_por_asesoria, String fecha_de_inicio) {
@@ -20,13 +38,11 @@ public class Asesor {
 		this.habilidades_secundarias = habilidades_secundarias;
 		this.tarifa_por_asesoria = tarifa_por_asesoria;
 		this.fecha_de_inicio = fecha_de_inicio;
-		Asesor.total++;
-		this.id = total;
+
 	}//constructor
  
 	 public Asesor() {
-		 Asesor.total++;
-		this.id = total;
+
 	 }//constructor
 	
 	public String getNombre() {
