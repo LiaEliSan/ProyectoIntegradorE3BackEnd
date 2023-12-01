@@ -1,6 +1,7 @@
 package com.babydevs.modelos.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.babydevs.modelos.model.Asesor;
 import com.babydevs.modelos.repository.AsesorRepository;
@@ -38,7 +39,14 @@ public class AsesorService {
 	}//deleteAsesor
 	
 	public Asesor addAsesor(Asesor asesor) {
-		return asesorRepository.save(asesor);
+		Optional<Asesor> tmpAses = asesorRepository.findByNombre(asesor.getNombre());
+		if(tmpAses.isEmpty()) {//no se encuentra el producto con ese nombre
+			return asesorRepository.save(asesor);
+		}else {
+			System.out.println("Ya existe el producto con el nombre ["
+					+ asesor.getNombre() +"]");
+			return null;
+		}//else
 	}//addAsesor
 	
 	public Asesor updateAsesor(long id, String nombre, String descripcion, String habilidad_principal,
