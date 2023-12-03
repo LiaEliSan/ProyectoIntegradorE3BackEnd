@@ -38,15 +38,9 @@ public class VentaService {
 		return vent;
 	}//deleteVenta
 	
+	@SuppressWarnings("null")
 	public Venta addVenta(Venta venta){
-		Optional<Venta> tmpVent = ventaRepository.findById(venta.getId());
-		if(tmpVent.isEmpty()) {//no se encuentra el producto con ese nombre
 			return ventaRepository.save(venta);
-		}else {
-			System.out.println("Ya existe la venta con el id ["
-					+ venta.getId() +"]");
-			return null;
-		}//else
 	}//addVenta
 	
 	public Venta updateVenta(long id, String fecha_y_hora, String metodo_de_pago, 

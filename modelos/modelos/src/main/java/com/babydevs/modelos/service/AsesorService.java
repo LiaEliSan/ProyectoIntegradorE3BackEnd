@@ -56,7 +56,7 @@ public class AsesorService {
 			ases = asesorRepository.findById(id).get();
 				if(nombre!= null) ases.setNombre(nombre);
 				if(descripcion!=null) ases.setDescripcion(descripcion);
-				if (habilidad_principal!=null) ases.setHabilidad_principal(habilidad_principal);
+				if(habilidad_principal!=null) ases.setHabilidad_principal(habilidad_principal);
 				if(habilidades_secundarias!=null) ases.setHabilidades_secundarias(habilidades_secundarias);
 				if(tarifa_por_asesoria!=null) ases.setTarifa_por_asesoria(tarifa_por_asesoria);
 				if(fecha_de_inicio!=null)ases.setFecha_de_inicio(fecha_de_inicio);

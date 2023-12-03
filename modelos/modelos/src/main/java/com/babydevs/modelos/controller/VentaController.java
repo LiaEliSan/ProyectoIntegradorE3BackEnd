@@ -44,7 +44,7 @@ public class VentaController {
 	@PostMapping
 	public Venta addVenta(@RequestBody Venta venta){
 		return ventaService.addVenta(venta);
-	}//addProducto
+	}//addVenta
 	
 	@PutMapping(path="{ventId}")
 	public Venta updateVenta(@PathVariable("ventId") long id,

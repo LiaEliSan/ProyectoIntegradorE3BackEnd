@@ -100,7 +100,7 @@ public class Venta {
 
 	@Override
 	public String toString() {
-		return "Asesor [id=" + id + ", fecha_y_hora=" + fecha_y_hora + ", metodo_de_pago=" + metodo_de_pago + ", total="
+		return "Venta [id=" + id + ", fecha_y_hora=" + fecha_y_hora + ", metodo_de_pago=" + metodo_de_pago + ", total="
 				+ total + ", comision_babydevs=" + comision_babydevs
 				+ ", impuestos=" + impuestos + ", comision_asesor=" + comision_asesor + "]";
 	}//ToString
