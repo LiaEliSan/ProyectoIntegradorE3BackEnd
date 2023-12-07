@@ -1,8 +1,6 @@
 package com.babydevs.modelos.service;
 
 import java.util.List;
-import java.util.Optional;
-
 import com.babydevs.modelos.model.Venta;
 import com.babydevs.modelos.repository.VentaRepository;
 import org.springframework.beans.factory.annotation.Autowired;

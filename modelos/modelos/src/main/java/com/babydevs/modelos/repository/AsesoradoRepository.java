@@ -9,5 +9,5 @@ import com.babydevs.modelos.model.Asesorado;
 
 @Repository
 public interface AsesoradoRepository extends JpaRepository<Asesorado, Long>{
-	Optional<Asesorado> findByNombre(String nombre);
+	Optional<Asesorado> findByEmail(String email);
 }//interface AsesoradoRepository

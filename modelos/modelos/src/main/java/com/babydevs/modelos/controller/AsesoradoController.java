@@ -9,15 +9,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.babydevs.modelos.model.ChangePassword;
 import com.babydevs.modelos.model.Asesorado;
 import com.babydevs.modelos.service.AsesoradoService;
 
 @RestController
 @RequestMapping(path="/api/asesorados/")//http://localhost:8080/api/asesorados/
 public class AsesoradoController {
+	
 	private final AsesoradoService asesoradoService;
 	@Autowired
 	public AsesoradoController(AsesoradoService asesoradoService) {
@@ -48,14 +49,9 @@ public class AsesoradoController {
 	
 	@PutMapping(path="{aseId}")
 	public Asesorado updateAsesorado(@PathVariable("aseId") long id,
-			@RequestParam(required=false) String nombre,
-			@RequestParam(required=false) String edad,
-			@RequestParam(required=false) String nivel_de_estudios,
-			@RequestParam(required=false) String ocupacion,
-			@RequestParam(required=false) String locacion
+			@RequestBody ChangePassword changePassword
 			) {
-		return asesoradoService.updateAsesorado(id, nombre, edad, nivel_de_estudios, ocupacion,
-											locacion);
+		return asesoradoService.updateAsesorado(id,  changePassword);
 	}//updateAsesorado
 	
 }//class AsesorController

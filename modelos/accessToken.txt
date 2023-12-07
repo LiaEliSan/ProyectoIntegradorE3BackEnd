@@ -1,0 +1,10 @@
+{
+   "email": "correo@dominio.com",
+        "password": "11111"
+}
+
+{
+    "accessToken": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjb3JyZW9AZG9taW5pby5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcwMTkyNzAwMSwiZXhwIjoxNzAxOTYzMDAxfQ.nrTDKl0V5QRm95h2Y9N8X0CWC-z-7WpiCIdm03kTKps"
+}
+
+eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJjb3JyZW9AZG9taW5pby5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTcwMTkyNzAwMSwiZXhwIjoxNzAxOTYzMDAxfQ.nrTDKl0V5QRm95h2Y9N8X0CWC-z-7WpiCIdm03kTKps
